@@ -17,11 +17,11 @@ namespace DataAccess.Concrete.InMemory
             //oracle , sql, postgres,mongodb
 
             _products = new List<Product> {
-            new Product{ProductId=1, CategoryId=1, ProductName="Bardak", UnitPrice=15, UnitInStock=15},
-            new Product{ProductId=2, CategoryId=1, ProductName="Kamera", UnitPrice=1500, UnitInStock=3},
-            new Product{ProductId=3, CategoryId=2, ProductName="Telefon", UnitPrice=3000, UnitInStock=12},
-            new Product{ProductId=4, CategoryId=2, ProductName="Klavye", UnitPrice=150, UnitInStock=16},
-            new Product{ProductId=5, CategoryId=2, ProductName="Mouse", UnitPrice=85, UnitInStock=1}
+            new Product{ProductId=1, CategoryId=1, ProductName="Bardak", UnitPrice=15, UnitsInStock=15},
+            new Product{ProductId=2, CategoryId=1, ProductName="Kamera",UnitPrice=1500, UnitsInStock=3},
+            new Product{ProductId=3, CategoryId=2, ProductName="Telefon",UnitPrice=3000, UnitsInStock=12},
+            new Product{ProductId=4, CategoryId=2, ProductName="Klavye", UnitPrice=150, UnitsInStock=16},
+            new Product{ProductId=5, CategoryId=2, ProductName="Mouse", UnitPrice=85, UnitsInStock=1}
             };
         }
 
@@ -55,7 +55,7 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.ProductName = product.ProductName;
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;
-            productToUpdate.UnitInStock = product.UnitInStock;
+           productToUpdate.UnitsInStock = product.UnitsInStock;
 
         }
 
