@@ -6,8 +6,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-   public interface ICategoryDal: Core.DataAccess.IEntityRepository<Category>
+    public interface ICategoryDal : Core.DataAccess.IEntityRepository<Category>
     {
-      
+       
     }
 }

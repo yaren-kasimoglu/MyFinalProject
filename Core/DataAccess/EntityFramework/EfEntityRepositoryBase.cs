@@ -35,11 +35,7 @@ namespace Core.DataAccess.EntityFramework
             }
         }
 
-        public TEntity Get()
-        {
-            throw new NotImplementedException();
-        }
-
+      
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
         {
             using (TContext context = new TContext())
