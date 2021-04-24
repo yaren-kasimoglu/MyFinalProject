@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -24,22 +25,23 @@ namespace Business.Concrete
             //business code yazma yeri
 
             if (product.ProductName.Length < 2)
-            {
-                return new ErrorResult("ürün ismi en az 2 karakter olmalıdır");
+            {//magic string
+                return new ErrorResult(Messages.ProductNameInvalid);
             }
 
             _productDal.Add(product);
 
 
-            return new SuccessResult("Ürün eklendi.");
+            return new SuccessResult(Messages.ProductAdded);
         }
 
-        public List<Product> GetAll()
+        public IDataResult<List<Product>> GetAll()
         {
             // iş kodları 
             //yetkisi var mı ?
 
-            return _productDal.GetAll();
+            return new DataResult(_productDal.GetAll());
+            
             
         }
 
